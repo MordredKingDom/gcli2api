@@ -654,9 +654,9 @@ async def non_stream_request(
                             # media_type="application/json"
                         # )
                     # continue  # 重试
-                else:
-                    log.error(f"[NON-STREAM] 达到最大重试次数，返回404错误")
-                    return last_error_response
+                # else:
+                    # log.error(f"[NON-STREAM] 达到最大重试次数，返回404错误")
+                    # return last_error_response
             else:
                 # 错误码不在重试范围内，直接返回
                 log.error(f"[NON-STREAM] 非流式请求失败，非重试错误码 (status={status_code}), 凭证: {current_file}, 响应: {error_text[:500] if error_text else '无'}")
