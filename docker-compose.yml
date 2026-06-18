@@ -6,7 +6,7 @@ services:
     ports:
       - "7861:7861"
     environment:
-      - PASSWORD=vR4&nL8$
+      - PASSWORD=pwd
       - PORT=7861
     volumes:
       - /root/docker/gcli2api/data/creds:/app/creds
